@@ -6,7 +6,7 @@ export const metadata = {
   description: 'bsky.sh',
 };
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <div className="main">

@@ -5,7 +5,7 @@ export const metadata = {
   description: "i'm alice",
 };
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <div>hi i&apos;m alice</div>
