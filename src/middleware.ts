@@ -4,13 +4,17 @@ import { getValidSubdomain } from '@/utils/subdomain';
 
 // RegExp for public files
 const PUBLIC_FILE = /\.(.*)$/; // Files
+const DID_PATH_URI = '/xrpc/com.atproto.identity.resolveHandle';
 
 export async function middleware(req: NextRequest) {
   // Clone the URL
   const url = req.nextUrl.clone();
 
   // Skip public files
-  if (PUBLIC_FILE.test(url.pathname) || url.pathname.includes('_next')) return;
+  if ((PUBLIC_FILE.test(url.pathname) || url.pathname.includes('_next')) && !url.pathname.includes(DID_PATH_URI)) {
+    console.log(`>>> Skipping: ${url.pathname}`);
+    return;
+  }
 
   const host = req.headers.get('host');
   const subdomain = getValidSubdomain(host);
