@@ -32,7 +32,7 @@ export function generateMetadata({ params }: { params: person }): Metadata {
       ],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: 'summary',
       site: absoluteUrl,
       title: title,
       description: description,
