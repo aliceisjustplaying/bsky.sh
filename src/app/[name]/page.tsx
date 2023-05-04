@@ -6,10 +6,39 @@ interface person {
 }
 
 export function generateMetadata({ params }: { params: person }): Metadata {
+  const title = `${params.name}.bsky.sh`;
+  const description = 'nothing to see here';
+  const icon = '/nope.png';
+  const absoluteUrl = `https://${params.name}.bsky.sh`;
+  const absoluteIconUrl = `https://bsky.sh${icon}`;
+
   return {
-    title: `${params.name}.bsky.sh`,
-    description: 'nothing to see here',
-    icons: '/nope.png',
+    title: title,
+    description: description,
+    icons: {
+      icon: icon,
+      apple: icon,
+      shortcut: icon,
+    },
+    openGraph: {
+      title: title,
+      description: description,
+      url: absoluteUrl,
+      siteName: title,
+      images: [
+        {
+          url: absoluteIconUrl,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: absoluteUrl,
+      title: title,
+      description: description,
+      creator: '@alice.bsky.sh',
+      images: absoluteIconUrl,
+    },
   };
 }
 
