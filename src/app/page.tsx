@@ -2,8 +2,8 @@ import GA from '@/utils/ga';
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'alice.bsky.sh',
-  description: "hi i'm alice",
+  title: 'bsky.sh',
+  description: 'bsky.sh',
 };
 
 export default function Home() {
