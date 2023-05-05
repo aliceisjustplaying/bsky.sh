@@ -46,7 +46,6 @@ export default function Page({ params }: { params: person }) {
   return (
     <>
       <div>{params.name} does not exist</div>
-      <GA />
     </>
   );
 }

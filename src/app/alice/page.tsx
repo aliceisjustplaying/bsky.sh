@@ -9,7 +9,6 @@ export default function Page() {
   return (
     <>
       <div>hi i&apos;m alice</div>
-      <GA />
     </>
   );
 }
