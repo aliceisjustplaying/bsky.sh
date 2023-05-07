@@ -1,7 +1,41 @@
-export const metadata = {
-  title: 'Bluesky Like Bomb',
-  description: 'A way to like all posts in a thread easily.',
-};
+import type { Metadata } from 'next';
+
+export function generateMetadata(): Metadata {
+  const title = `Bluesky Like Bomb`;
+  const description = 'A way to like all posts in a thread easily.';
+  const icon = '/revolving-hearts.png';
+  const absoluteUrl = `https://likebomb.bsky.sh`;
+  const absoluteIconUrl = `https://bsky.sh${icon}`;
+
+  return {
+    title: title,
+    description: description,
+    icons: {
+      icon: icon,
+      apple: icon,
+      shortcut: icon,
+    },
+    openGraph: {
+      title: title,
+      description: description,
+      url: absoluteUrl,
+      siteName: title,
+      images: [
+        {
+          url: absoluteIconUrl,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary',
+      site: absoluteUrl,
+      title: title,
+      description: description,
+      creator: '@alice.bsky.sh',
+      images: absoluteIconUrl,
+    },
+  };
+}
 
 export default function Page() {
   return (
