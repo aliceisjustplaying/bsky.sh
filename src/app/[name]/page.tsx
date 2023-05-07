@@ -1,4 +1,3 @@
-import GA from '@/utils/ga';
 import type { Metadata } from 'next';
 
 interface person {
