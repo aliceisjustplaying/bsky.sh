@@ -52,7 +52,8 @@ export default function Page() {
         ></div>
         <br />
         <a href="https://page.brick.do/like-bomb-bookmarklet-lkKreDvYyP4d">Original twitter version</a> by{' '}
-        <a href="https://staging.bsky.app/profile/did:plc:xbxpdv7nstw5ybmlneupnuaa">@nvpkp.bsky.social</a>.
+        <a href="https://staging.bsky.app/profile/did:plc:xbxpdv7nstw5ybmlneupnuaa">@nvpkp.bsky.social</a>. Created with
+        help from the <a href="https://discord.gg/3srmDsHSZJ">Bluesky API Touchers Discord</a>.
       </div>
     </>
   );
