@@ -74,7 +74,7 @@ export default function Page() {
         <div
           dangerouslySetInnerHTML={{
             __html:
-              '<a href="javascript:void%20function(){var%20a=document,b=a.querySelectorAll.bind(a),c=window.location.href;if(c.includes(%22bsky.app%22)){var%20d=b(%22div[aria-label=%22Like%22]%22),e=[...d].filter(a=%3E!!a.offsetParent);e.forEach(a=%3Ea.click())}else%20if(c.includes(%22twitter.com%22)){var%20d=b(%22div[data-testid=%22like%22]%22);d.forEach(a=%3Ea.click())}}();">💞 like bomb 💞</a>',
+              '<a href="javascript:void%20function(){var%20a=document,b=a.querySelectorAll.bind(a),c=window.location.hostname;switch(!0){case%20c.includes(%22bsky.app%22):var%20d=b(%22div[aria-label=%22Like%22]%22),e=[...d].filter(a=%3E!!a.offsetParent);e.forEach(a=%3Ea.click());break;case%20c.includes(%22klearsky.pages.dev%22):var%20f=document.querySelectorAll(%22button[class~=%22like-count%22][data-liked=%22false%22]%22);f.forEach(a=%3Ea.click());break;case%20c.includes(%22twitter.com%22):var%20d=b(%22div[data-testid=%22like%22]%22);d.forEach(a=%3Ea.click());}}();">💞 like bomb 💞</a>',
           }}
         ></div>
         <br />
