@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import React from 'react';
-import Prism from 'prismjs';
-import 'prismjs/themes/prism-solarizedlight.min.css';
+// import Prism from 'prismjs';
+// import 'prismjs/themes/prism-solarizedlight.min.css';
+// import Highlight from './highlight';
+import { CodeBlock } from './highlight';
 
 export function generateMetadata(): Metadata {
   const title = `Unified (Bluesky + Klearsky + Twitter) Like Bomb`;
@@ -83,15 +85,8 @@ export default function Page() {
       </div>
       <br />
       <div>
-        <summary>(mostly) Unminified source code:</summary>
-        <details>
-          <pre className="language-javascript text-xs">
-            <code
-              className="language-javascript"
-              dangerouslySetInnerHTML={{ __html: Prism.highlight(code, Prism.languages.javascript, 'javascript') }}
-            ></code>
-          </pre>
-        </details>
+        Unminified source code:
+        <CodeBlock code={code} language="javascript" />
       </div>
     </div>
   );
