@@ -48,15 +48,15 @@ switch (true) {
 case l.includes('bsky.app'):
   var allLikeButtons = $$('div[aria-label="Like"]');
   var filteredLikeButtons = [...allLikeButtons].filter(likeButton => !!likeButton.offsetParent);
-  filteredLikeButtons.forEach((e) => e.click());
+  filteredLikeButtons.forEach(e => e.click());
   break;
 case l.includes('klearsky.pages.dev'):
-  var likeButtons = document.querySelectorAll('button[class~="like-count"][data-liked="false"]');
+  var likeButtons = $$('button[class~="like-count"][data-liked="false"]');
   likeButtons.forEach(l => l.click());
   break;
 case l.includes('twitter.com'):
   var allLikeButtons = $$('div[data-testid="like"]');
-  allLikeButtons.forEach((e) => e.click());
+  allLikeButtons.forEach(e => e.click());
   break;
 }`;
 
