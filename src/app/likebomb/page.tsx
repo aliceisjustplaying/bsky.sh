@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
 import React from 'react';
-// import Prism from 'prismjs';
-// import 'prismjs/themes/prism-solarizedlight.min.css';
-// import Highlight from './highlight';
 import { CodeBlock } from './highlight';
+import bookmarkleter from 'bookmarkleter';
 
 export function generateMetadata(): Metadata {
   const title = `Unified (Bluesky + Klearsky + Twitter) Like Bomb`;
@@ -61,6 +59,14 @@ case l.includes('twitter.com'):
   break;
 }`;
 
+const bookmarklet = bookmarkleter(code, {
+  urlencode: true,
+  iife: true,
+  minify: true,
+});
+
+const bookmarkletHref = `<a href="${bookmarklet}">💞 like bomb 💞</a>`;
+
 export default function Page() {
   return (
     <div style={{ width: '800px;' }}>
@@ -73,8 +79,7 @@ export default function Page() {
         <br />
         <div
           dangerouslySetInnerHTML={{
-            __html:
-              '<a href="javascript:void%20function(){var%20a=document,b=a.querySelectorAll.bind(a),c=window.location.hostname;switch(!0){case%20c.includes(%22bsky.app%22):var%20d=b(%22div[aria-label=%22Like%22]%22),e=[...d].filter(a=%3E!!a.offsetParent);e.forEach(a=%3Ea.click());break;case%20c.includes(%22klearsky.pages.dev%22):var%20f=document.querySelectorAll(%22button[class~=%22like-count%22][data-liked=%22false%22]%22);f.forEach(a=%3Ea.click());break;case%20c.includes(%22twitter.com%22):var%20d=b(%22div[data-testid=%22like%22]%22);d.forEach(a=%3Ea.click());}}();">💞 like bomb 💞</a>',
+            __html: bookmarkletHref,
           }}
         ></div>
         <br />
