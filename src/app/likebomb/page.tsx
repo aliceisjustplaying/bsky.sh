@@ -46,8 +46,8 @@ var $$ = d.querySelectorAll.bind(d);
 var l = window.location.hostname;
 switch (true) {
 case l.includes('bsky.app'):
-  var allLikeButtons = $$('div[aria-label="Like"]');
-  var filteredLikeButtons = [...allLikeButtons].filter(likeButton => !!likeButton.offsetParent);
+  var likeButtons = $$('div[aria-label="Like"]');
+  var filteredLikeButtons = [...likeButtons].filter(likeButton => !!likeButton.offsetParent);
   filteredLikeButtons.forEach(e => e.click());
   break;
 case l.includes('klearsky.pages.dev'):
@@ -55,8 +55,8 @@ case l.includes('klearsky.pages.dev'):
   likeButtons.forEach(l => l.click());
   break;
 case l.includes('twitter.com'):
-  var allLikeButtons = $$('div[data-testid="like"]');
-  allLikeButtons.forEach(e => e.click());
+  var likeButtons = $$('div[data-testid="like"]');
+  likeButtons.forEach(e => e.click());
   break;
 }`;
 
