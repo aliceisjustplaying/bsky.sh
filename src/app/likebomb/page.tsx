@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import React from 'react';
 import Prism from 'prismjs';
-import 'prismjs/themes/prism.css';
+import 'prismjs/themes/prism-solarizedlight.min.css';
 
 export function generateMetadata(): Metadata {
-  const title = `Unified (Bluesky + Twitter) Like Bomb`;
+  const title = `Unified (Bluesky + Klearsky + Twitter) Like Bomb`;
   const description = 'A way to like all posts in a thread easily.';
   const icon = '/revolving-hearts.png';
   const absoluteUrl = `https://likebomb.bsky.sh`;
@@ -42,24 +42,31 @@ export function generateMetadata(): Metadata {
 
 const code = `var d = document;
 var $$ = d.querySelectorAll.bind(d);
-var l = window.location.href;
-if (l.includes('bsky.app')) {
+var l = window.location.hostname;
+switch (true) {
+case l.includes('bsky.app'):
   var allLikeButtons = $$('div[aria-label="Like"]');
   var filteredLikeButtons = [...allLikeButtons].filter(likeButton => !!likeButton.offsetParent);
   filteredLikeButtons.forEach((e) => e.click());
-} else if (l.includes('twitter.com')) {
+  break;
+case l.includes('klearsky.pages.dev'):
+  var likeButtons = document.querySelectorAll('button[class~="like-count"][data-liked="false"]');
+  likeButtons.forEach(l => l.click());
+  break;
+case l.includes('twitter.com'):
   var allLikeButtons = $$('div[data-testid="like"]');
   allLikeButtons.forEach((e) => e.click());
+  break;
 }`;
 
 export default function Page() {
   return (
-    <div style={{ width: '700px;' }}>
-      <h1>Unified (Bluesky + Twitter) Like Bomb</h1>
+    <div style={{ width: '800px;' }}>
+      <h1>Unified (Bluesky + Klearsky + Twitter) Like Bomb</h1>
       <div>
-        Drag this to your bookmarks bar. Clicking it will like every visible post in the thread on Bluesky, and mostly
-        all like buttons on a page on Twitter. You may have to scroll a bit on the latter to get them all; that&apos;s
-        because Twitter unloads tweets as you scroll.
+        Drag this to your bookmarks bar. Clicking it will like every visible post in the thread on Bluesky and{' '}
+        <a href="https://klearsky.pages.dev">Klearsky</a>, and mostly all like buttons on a page on Twitter. You may
+        have to scroll a bit on the latter to get them all; that&apos;s because Twitter unloads tweets as you scroll.
         <br />
         <br />
         <div
@@ -78,9 +85,12 @@ export default function Page() {
       <div>
         <summary>(mostly) Unminified source code:</summary>
         <details>
-          <pre
-            dangerouslySetInnerHTML={{ __html: Prism.highlight(code, Prism.languages.javascript, 'javascript') }}
-          ></pre>
+          <pre className="language-javascript text-xs">
+            <code
+              className="language-javascript"
+              dangerouslySetInnerHTML={{ __html: Prism.highlight(code, Prism.languages.javascript, 'javascript') }}
+            ></code>
+          </pre>
         </details>
       </div>
     </div>
