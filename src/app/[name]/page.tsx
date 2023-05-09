@@ -5,8 +5,8 @@ interface person {
 }
 
 export const metadata = {
-  title: 'alice.bsky.sh',
-  description: "i'm alice",
+  title: 'catch-all',
+  description: 'nothing to see here',
 };
 
 // export function generateMetadata({ params }: { params: person }): Metadata {
