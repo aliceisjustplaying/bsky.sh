@@ -4,6 +4,11 @@ interface person {
   name: string;
 }
 
+export const metadata = {
+  title: 'alice.bsky.sh',
+  description: "i'm alice",
+};
+
 // export function generateMetadata({ params }: { params: person }): Metadata {
 //   const title = `${params.name}.bsky.sh`;
 //   const description = 'nothing to see here';
