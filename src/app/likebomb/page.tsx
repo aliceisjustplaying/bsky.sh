@@ -52,7 +52,7 @@ case l.includes('bsky.app'):
   break;
 case l.includes('klearsky.pages.dev'):
   var likeButtons = $$('button[class~="like-count"][data-liked="false"]');
-  likeButtons.forEach(l => l.click());
+  likeButtons.forEach(e => e.click());
   break;
 case l.includes('twitter.com'):
   var likeButtons = $$('div[data-testid="like"]');
