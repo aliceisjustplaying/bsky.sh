@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import React from 'react';
-import { CodeBlock } from './highlight';
+import { CodeBlock } from '../../utils/highlight';
 // @ts-expect-error
 import bookmarkleter from 'bookmarkleter';
 
