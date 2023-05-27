@@ -4,7 +4,7 @@ import { getValidSubdomain } from '@/utils/subdomain';
 
 // RegExp for public files
 const PUBLIC_FILE = /\.(.*)$/; // Files
-const DID_PATH_URI = '/xrpc/com.atproto.identity.resolveHandle';
+const DID_PATH_URI = '/.well-known/atproto-did';
 
 export async function middleware(req: NextRequest) {
   // Clone the URL
