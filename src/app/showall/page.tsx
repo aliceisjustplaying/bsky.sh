@@ -41,10 +41,23 @@ export function generateMetadata(): Metadata {
   };
 }
 
-const code = `[...document.querySelectorAll('div')]
-.filter(div => div.innerHTML.trim() === 'Show post')
-.filter(div => !!div.offsetParent)
-.forEach(e => e.click());`;
+const code = `var d = document;
+var $$ = d.querySelectorAll.bind(d);
+var l = window.location.hostname;
+switch (true) {
+case l.includes('bsky.app'):
+  [...$$('div')]
+  .filter(div => div.innerHTML.trim() === 'Show post')
+  .filter(div => !!div.offsetParent)
+  .forEach(e => e.click());
+  break;
+case l.includes('twitter.com'):
+case l.includes('x.com'):
+  [...$$('span')]
+  .filter(div => div.innerHTML.trim() === 'View')
+  .forEach(e => e.click());
+  break;
+}`;
 
 const bookmarklet = bookmarkleter(code, {
   urlencode: true,
@@ -59,7 +72,8 @@ export default function Page() {
     <div style={{ width: '800px;' }}>
       <h1>Show All Replies</h1>
       <div>
-        Drag this to your bookmarks bar. Clicking it will show all replies in a Bluesky thread from people you muted.
+        Drag this to your bookmarks bar. Clicking it will show all replies in a Bluesky or Twitter thread from people
+        you muted.
         <br />
         <br />
         <div
