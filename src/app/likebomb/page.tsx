@@ -55,6 +55,7 @@ case l.includes('klearsky.pages.dev'):
   likeButtons.forEach(e => e.click());
   break;
 case l.includes('twitter.com'):
+case l.includes('x.com'):
   var likeButtons = $$('div[data-testid="like"]');
   likeButtons.forEach(e => e.click());
   break;
