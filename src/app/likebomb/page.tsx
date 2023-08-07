@@ -71,7 +71,7 @@ const bookmarkletHref = `<a href="${bookmarklet}">💞 like bomb 💞</a>`;
 
 export default function Page() {
   return (
-    <div style={{ width: '800px;' }}>
+    <div style={{ width: '800px' }}>
       <h1>Unified (Bluesky + Klearsky + Twitter) Like Bomb</h1>
       <div>
         Drag this to your bookmarks bar. Clicking it will like every visible post in the thread on Bluesky and{' '}

@@ -47,7 +47,7 @@ var l = window.location.hostname;
 switch (true) {
 case l.includes('bsky.app'):
   [...$$('div')]
-  .filter(div => div.innerHTML.trim() === 'Show post')
+  .filter(div => div.innerHTML.trim() === 'Show')
   .filter(div => !!div.offsetParent)
   .forEach(e => e.click());
   break;
@@ -69,7 +69,7 @@ const bookmarkletHref = `<a href="${bookmarklet}">🙈 show all 🙈</a>`;
 
 export default function Page() {
   return (
-    <div style={{ width: '800px;' }}>
+    <div style={{ width: '800px' }}>
       <h1>Show All Replies</h1>
       <div>
         Drag this to your bookmarks bar. Clicking it will show all replies in a Bluesky or Twitter thread from people
