@@ -54,7 +54,7 @@ case l.includes('bsky.app'):
 case l.includes('twitter.com'):
 case l.includes('x.com'):
   [...$$('span')]
-  .filter(div => div.innerHTML.trim() === 'View')
+  .filter(div => div.innerHTML.trim().match(/^(View|Show replies|Show more replies)$/))
   .forEach(e => e.click());
   break;
 }`;
