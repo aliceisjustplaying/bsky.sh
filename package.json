@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@atproto/api": "^0.6.2",
     "@babel/preset-typescript": "^7.22.5",
     "@types/node": "^20.4.9",
     "@types/react": "^18.2.20",
@@ -25,5 +24,10 @@
     "react-dom": "^18.2.0",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6"
+  },
+  "pnpm": {
+    "overrides": {
+      "yargs-parser@>=6.0.0 <13.1.2": ">=13.1.2"
+    }
   }
 }
