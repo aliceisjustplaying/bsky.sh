@@ -4,9 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  yargs-parser@>=6.0.0 <13.1.2: '>=13.1.2'
-
 dependencies:
   '@babel/preset-typescript':
     specifier: ^7.22.5
@@ -934,7 +931,7 @@ packages:
       lodash: 4.17.21
       mkdirp: 0.5.6
       util.promisify: 1.1.2
-      yargs-parser: 21.1.1
+      yargs-parser: 10.1.0
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -1146,6 +1143,11 @@ packages:
   /camelcase-css@2.0.1:
     resolution: {integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==}
     engines: {node: '>= 6'}
+    dev: false
+
+  /camelcase@4.1.0:
+    resolution: {integrity: sha512-FxAv7HpHrXbh3aPo4o2qxHay2lkLY3x5Mw3KeE4KQE8ysVfziWeRZDwcjauvwBSGEC/nXUPzZy8zeh4HokqOnw==}
+    engines: {node: '>=4'}
     dev: false
 
   /caniuse-lite@1.0.30001519:
@@ -3154,9 +3156,10 @@ packages:
     engines: {node: '>= 14'}
     dev: false
 
-  /yargs-parser@21.1.1:
-    resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==}
-    engines: {node: '>=12'}
+  /yargs-parser@10.1.0:
+    resolution: {integrity: sha512-VCIyR1wJoEBZUqk5PA+oOBF6ypbwh5aNB3I50guxAL/quggdfs4TtNHQrSazFA3fYZ+tEqfs0zIGlv0c/rgjbQ==}
+    dependencies:
+      camelcase: 4.1.0
     dev: false
 
   /yocto-queue@0.1.0:
