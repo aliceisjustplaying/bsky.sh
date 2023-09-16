@@ -46,7 +46,7 @@ var $$ = d.querySelectorAll.bind(d);
 var l = window.location.hostname;
 switch (true) {
 case l.includes('bsky.app'):
-  var likeButtons = $$('div[aria-label^="Like ("]');
+  var likeButtons = $$('button[aria-label^="Like ("]');
   var filteredLikeButtons = [...likeButtons].filter(likeButton => !!likeButton.offsetParent);
   filteredLikeButtons.forEach(e => e.click());
   break;
