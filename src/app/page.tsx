@@ -1,4 +1,3 @@
-'use server';
 import Image from 'next/image';
 // import Link from 'next/link';
 import { headers } from 'next/headers';
@@ -8,10 +7,9 @@ export const metadata = {
   description: 'bsky.sh',
 };
 
-const host = headers().get('host');
-const protocol = headers().get('x-forwarded-proto');
-
 export default function Page() {
+  const host = headers().get('host');
+  const protocol = headers().get('x-forwarded-proto');
   return (
     <>
       <div className="main">
