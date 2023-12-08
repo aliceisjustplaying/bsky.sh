@@ -7,7 +7,7 @@ export const metadata = {
   description: 'bsky.sh',
 };
 
-export default function Page() {
+export default async function Page() {
   const host = headers().get('host');
   const protocol = headers().get('x-forwarded-proto');
   return (
