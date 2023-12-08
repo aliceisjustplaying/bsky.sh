@@ -8,7 +8,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         {children}
-        <Script src="https://cursor-party.YOUR-USERNAME-HERE.partykit.dev/cursors.js"></Script>
+        <Script src="https://cursor-party.aliceisjustplaying.partykit.dev/cursors.js"></Script>
       </body>
       <GA />
     </html>

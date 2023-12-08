@@ -17,7 +17,7 @@
     "bookmarkleter": "^1.1.0",
     "eslint": "^8.54.0",
     "eslint-config-next": "^14.0.3",
-    "next": "canary",
+    "next": "14.0.2",
     "postcss": "^8.4.31",
     "prism-react-renderer": "^2.2.0",
     "react": "^18.2.0",
