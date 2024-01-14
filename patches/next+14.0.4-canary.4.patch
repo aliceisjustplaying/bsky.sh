@@ -1,0 +1,32 @@
+diff --git a/node_modules/next/dist/client/components/app-router.js b/node_modules/next/dist/client/components/app-router.js
+index 69d3063..89f154f 100644
+--- a/node_modules/next/dist/client/components/app-router.js
++++ b/node_modules/next/dist/client/components/app-router.js
+@@ -326,6 +326,11 @@ function copyNextJsInternalHistoryState(data) {
+             if (!event.persisted || !((_window_history_state = window.history.state) == null ? void 0 : _window_history_state.__PRIVATE_NEXTJS_INTERNALS_TREE)) {
+                 return;
+             }
++            // If restoring from a MPA navigation, globalMutable.pendingMpaPath might be set to
++            // the URL we navigated to. This breaks future navigations to that URL, so we need to clear it
++            if (globalMutable.pendingMpaPath) {
++                globalMutable.pendingMpaPath = undefined;
++            }
+             dispatch({
+                 type: _routerreducertypes.ACTION_RESTORE,
+                 url: new URL(window.location.href),
+diff --git a/node_modules/next/dist/esm/client/components/app-router.js b/node_modules/next/dist/esm/client/components/app-router.js
+index d6ee706..a35fb4a 100644
+--- a/node_modules/next/dist/esm/client/components/app-router.js
++++ b/node_modules/next/dist/esm/client/components/app-router.js
+@@ -295,6 +295,11 @@ function copyNextJsInternalHistoryState(data) {
+             if (!event.persisted || !((_window_history_state = window.history.state) == null ? void 0 : _window_history_state.__PRIVATE_NEXTJS_INTERNALS_TREE)) {
+                 return;
+             }
++            // If restoring from a MPA navigation, globalMutable.pendingMpaPath might be set to
++            // the URL we navigated to. This breaks future navigations to that URL, so we need to clear it
++            if (globalMutable.pendingMpaPath) {
++                globalMutable.pendingMpaPath = undefined;
++            }
+             dispatch({
+                 type: ACTION_RESTORE,
+                 url: new URL(window.location.href),
