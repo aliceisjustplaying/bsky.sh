@@ -51,7 +51,7 @@ case l.includes('bsky.app'):
   filteredLikeButtons.forEach(e => e.click());
   break;
 case l.includes('klearsky.pages.dev'):
-  var likeButtons = $$('button[class~="like-count"][data-liked="false"]');
+  var likeButtons = $$('button[class~="like-button"][data-liked="false"]');
   likeButtons.forEach(e => e.click());
   break;
 case l.includes('twitter.com'):
