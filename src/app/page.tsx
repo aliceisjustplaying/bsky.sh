@@ -16,9 +16,12 @@ export default async function Page() {
         <Link href={`${protocol}://likebomb.${host}`}>💞 like bomb bookmarklet 💞</Link>
         <Link href={`${protocol}://showall.${host}`}>🙈 show all bookmarklet 🙈</Link>
         <Link href={`${protocol}://alice.${host}`}>me</Link>
+        <Link href={`${protocol}://sortinghat.${host}`}>sorting hat</Link>
         {/* <a href={`${protocol}://likebomb.${host}`}>💞 like bomb bookmarklet 💞</a>
         <a href={`${protocol}://showall.${host}`}>🙈 show all bookmarklet 🙈</a>
-        <a href={`${protocol}://alice.${host}`}>me</a> */}
+        <a href={`${protocol}://alice.${host}`}>me</a>
+        <a href={`${protocol}://sortinghat.${host}`}>sorting hat</a>
+        */} 
       </div>
       <footer>
         <Image src="/underconstruction.gif" width={459} height={51} alt="under construction" />
