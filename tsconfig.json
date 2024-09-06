@@ -31,6 +31,6 @@
     "src/app/alice/route.tsbak",
     "src/app/alice/layout.tsxbak",
     "src/app/layout.tsxbak"
-  ],
+, "src/app/sortinghat/page.tsx.bak"  ],
   "exclude": ["node_modules"]
 }
