@@ -5,7 +5,7 @@ import { CodeBlock } from '../../utils/highlight';
 import bookmarkleter from 'bookmarkleter';
 
 export function generateMetadata(): Metadata {
-  const title = `Unified (Bluesky + Klearsky + Twitter) Like Bomb`;
+  const title = `Bluesky Like Bomb`;
   const description = 'A way to like all posts in a thread easily.';
   const icon = '/revolving-hearts.png';
   const absoluteUrl = `https://likebomb.bsky.sh`;
@@ -44,22 +44,10 @@ export function generateMetadata(): Metadata {
 const code = `var d = document;
 var $$ = d.querySelectorAll.bind(d);
 var l = window.location.hostname;
-switch (true) {
-case l.includes('bsky.app'):
-  var likeButtons = $$('button[aria-label^="Like ("]');
-  var filteredLikeButtons = [...likeButtons].filter(likeButton => !!likeButton.offsetParent);
-  filteredLikeButtons.forEach(e => e.click());
-  break;
-case l.includes('klearsky.pages.dev'):
-  var likeButtons = $$('button[class~="like-button"][data-liked="false"]');
-  likeButtons.forEach(e => e.click());
-  break;
-case l.includes('twitter.com'):
-case l.includes('x.com'):
-  var likeButtons = $$('div[data-testid="like"]');
-  likeButtons.forEach(e => e.click());
-  break;
-}`;
+var likeButtons = $$('div[aria-label^="Like ("]');
+var filteredLikeButtons = [...likeButtons].filter(likeButton => !!likeButton.offsetParent);
+filteredLikeButtons.forEach(e => e.click());
+`;
 
 const bookmarklet = bookmarkleter(code, {
   urlencode: true,
@@ -72,11 +60,9 @@ const bookmarkletHref = `<a href="${bookmarklet}">💞 like bomb 💞</a>`;
 export default function Page() {
   return (
     <div style={{ width: '800px' }}>
-      <h1>Unified (Bluesky + Klearsky + Twitter) Like Bomb</h1>
+      <h1>Bluesky Like Bomb</h1>
       <div>
-        Drag this to your bookmarks bar. Clicking it will like every visible post in the thread on Bluesky and{' '}
-        <a href="https://klearsky.pages.dev">Klearsky</a>, and mostly all like buttons on a page on Twitter. You may
-        have to scroll a bit on the latter to get them all; that&apos;s because Twitter unloads tweets as you scroll.
+        Drag this to your bookmarks bar. Clicking it will like every visible post in the thread on Bluesky.
         <br />
         <br />
         <div
