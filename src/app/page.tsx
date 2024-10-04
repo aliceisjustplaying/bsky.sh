@@ -13,23 +13,22 @@ export default async function Page() {
   return (
     <>
       <div className="main">
-        <h1>My Bluesky things</h1>
+        <h1>🦋 My Bluesky things</h1>
         <Link href={`${protocol}://alice.${host}`}>@alice.bsky.sh</Link>&nbsp;(me)
-        <h2>Bookmarklets:</h2>
-        <Link href={`${protocol}://likebomb.${host}`}>💞 like bomb bookmarklet 💞</Link>
-        <br />
-        <Link href={`${protocol}://showall.${host}`}>🙈 show all bookmarklet 🙈</Link>
-        <h2>Bluesky Labelers:</h2>
-        <Link href={`${protocol}://sortinghat.${host}`}>sorting hat bluesky labeler</Link>
-        <br />
-        <Link href={`${protocol}://zodiacsigns.${host}`}>zodiac signs bluesky labeler</Link>
-        <h2>Other projects:</h2>
+        <h2>👩‍💻 Projects</h2>
         <Link href={`https://emojistats.bsky.sh`}>
           Emoji Stats for Bluesky
         </Link>&nbsp;<b>(New!)</b>
         <br />
-        
         <Link href={`https://bluesky-heatmap.fly.dev`}>Bluesky Posts Heatmap Generator</Link>
+        <h2>🏷️ Labelers</h2>
+        <Link href={`${protocol}://sortinghat.${host}`}>sorting hat</Link>
+        <br />
+        <Link href={`${protocol}://zodiacsigns.${host}`}>zodiac signs</Link>
+        <h2>🔖 Bookmarklets</h2>
+        <Link href={`${protocol}://likebomb.${host}`}>💞 like bomb 💞</Link>
+        <br />
+        <Link href={`${protocol}://showall.${host}`}>🙈 show all 🙈</Link>
       </div>
       {/* <footer>
         <Image src="/underconstruction.gif" width={459} height={51} alt="under construction" />
