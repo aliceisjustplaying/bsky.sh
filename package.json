@@ -10,21 +10,21 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "@babel/preset-typescript": "^7.24.7",
-    "@types/node": "^22.5.5",
-    "@types/react": "^18.3.8",
+    "@babel/preset-typescript": "^7.25.7",
+    "@types/node": "^22.7.4",
+    "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.20",
     "bookmarkleter": "^1.1.0",
-    "eslint": "^9.10.0",
-    "eslint-config-next": "^14.2.13",
-    "next": "^14.2.13",
+    "eslint": "^9.11.1",
+    "eslint-config-next": "^14.2.14",
+    "next": "^14.2.14",
     "patch-package": "^8.0.0",
     "postcss": "^8.4.47",
     "prism-react-renderer": "^2.4.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwindcss": "^3.4.12",
+    "tailwindcss": "^3.4.13",
     "typescript": "^5.6.2"
   }
 }

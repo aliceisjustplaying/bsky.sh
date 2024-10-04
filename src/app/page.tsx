@@ -16,7 +16,7 @@ export default async function Page() {
         <Link href={`${protocol}://likebomb.${host}`}>💞 like bomb bookmarklet 💞</Link>
         <Link href={`${protocol}://showall.${host}`}>🙈 show all bookmarklet 🙈</Link>
         <Link href={`${protocol}://alice.${host}`}>me</Link>
-        <Link href={`${protocol}://bee.${host}`}>bee</Link>
+        {/* <Link href={`${protocol}://bee.${host}`}>bee</Link> */}
         <Link href={`${protocol}://sortinghat.${host}`}>sorting hat bluesky labeler</Link>
         <Link href={`${protocol}://zodiacsigns.${host}`}>zodiac signs bluesky labeler</Link>
       </div>
