@@ -9,6 +9,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {children}
         <Script src="https://cursor-party.aliceisjustplaying.partykit.dev/cursors.js"></Script>
+        <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
       </body>
       <GA />
     </html>
