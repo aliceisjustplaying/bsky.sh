@@ -66,6 +66,9 @@ export default async function Page() {
           <li>
             <Link href={`https://zodiacsigns.bsky.sh`}>zodiac signs</Link>
           </li>
+          <li>
+            <Link href={`https://github.com/aliceisjustplaying/labeler-starter-kit-bsky`}>Bluesky Labeler Starter Kit</Link>&nbsp;<b>(New!)</b>
+          </li>
         </ul>
         <h2>Other Links</h2>
         <ul>
