@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -16,7 +16,7 @@
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.20",
     "bookmarkleter": "^1.1.0",
-    "eslint": "^9.11.1",
+    "eslint": "^9.12.0",
     "eslint-config-next": "^14.2.14",
     "next": "^14.2.14",
     "patch-package": "^8.0.0",
