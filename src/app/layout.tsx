@@ -9,9 +9,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {children}
         <Script src="https://cursor-party.aliceisjustplaying.partykit.dev/cursors.js"></Script>
-        <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
+        <Script src="https://scripts.simpleanalyticscdn.com/latest.js"></Script>
+        <Script src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "7d35b560a68b4b0bb695d5cb8bc7ddff"}'></Script>
       </body>
-      <GA />
     </html>
   );
 }
