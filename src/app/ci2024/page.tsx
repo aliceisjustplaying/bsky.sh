@@ -56,8 +56,14 @@ export default async function Page() {
           <li>
             <Link href={`https://github.com/aliceisjustplaying/languagestats-bsky`}>Language Stats</Link>
           </li>
+        </ul>
+        <h2>Labelers</h2>
+        <ul>
           <li>
-            <Link href={``}>My talk slides</Link>
+            <Link href={`https://sortinghat.bsky.sh`}>sorting hat</Link>
+          </li>
+          <li>
+            <Link href={`https://zodiacsigns.bsky.sh`}>zodiac signs</Link>
           </li>
         </ul>
         <h2>Other Links</h2>
