@@ -85,7 +85,7 @@ export default async function Page() {
             <Link href={`https://tokimekibluesky.vercel.app/`}>Tokimeki Bluesky</Link>
           </li>
           <li>
-            <Link href={`https://wolfgang.raios.xyz/`}>Wolfgang's Blueskytools</Link>
+            <Link href={`https://wolfgang.raios.xyz/`}>Wolfgang's Bluesky tools</Link>
           </li>
           <li>
             <Link href={`https://mary-ext.codeberg.page/bluesky-quiet-posters/`}>Bluesky Quiet Posters</Link>
