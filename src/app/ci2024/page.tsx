@@ -45,6 +45,7 @@ export default async function Page() {
     <>
       <div className="main">
         <h1>Thanks for coming to my talk!</h1>
+        <Link href={`https://alice.bsky.sh`}>@alice.bsky.sh</Link> on Bluesky
         <h2>My projects</h2>
         <ul>
           <li>
