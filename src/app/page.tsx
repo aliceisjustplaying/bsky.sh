@@ -8,8 +8,8 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const host = headers().get('host');
-  const protocol = headers().get('x-forwarded-proto');
+  const host = (await headers()).get('host');
+  const protocol = (await headers()).get('x-forwarded-proto');
   return (
     <>
       <div className="main">

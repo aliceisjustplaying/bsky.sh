@@ -46,7 +46,8 @@ export const metadata = {
 //   };
 // }
 
-export default function Page({ params }: { params: person }) {
+export default async function Page(props: { params: Promise<person> }) {
+  const params = await props.params;
   return (
     <>
       <div>{params.name} does not exist</div>
