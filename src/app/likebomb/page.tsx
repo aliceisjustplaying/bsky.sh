@@ -44,7 +44,7 @@ export function generateMetadata(): Metadata {
 const code = `var d = document;
 var $$ = d.querySelectorAll.bind(d);
 var l = window.location.hostname;
-var likeButtons = $$('div[aria-label^="Like ("]');
+var likeButtons = $$('button[aria-label^="Like ("]');
 var filteredLikeButtons = [...likeButtons].filter(likeButton => !!likeButton.offsetParent);
 filteredLikeButtons.forEach(e => e.click());
 `;
