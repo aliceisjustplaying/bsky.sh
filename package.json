@@ -10,14 +10,14 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "@babel/preset-typescript": "^7.25.7",
-    "@types/node": "^22.7.7",
+    "@babel/preset-typescript": "^7.26.0",
+    "@types/node": "^22.9.0",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
-    "@vercel/functions": "^1.4.2",
+    "@vercel/functions": "^1.5.0",
     "autoprefixer": "^10.4.20",
     "bookmarkleter": "^1.1.0",
-    "eslint": "^9.13.0",
+    "eslint": "^9.14.0",
     "eslint-config-next": "15.0.2",
     "next": "15.0.2",
     "patch-package": "^8.0.0",
