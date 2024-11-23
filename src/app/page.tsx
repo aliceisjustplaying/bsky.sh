@@ -16,9 +16,7 @@ export default async function Page() {
         <h1>🦋 My Bluesky things</h1>
         <Link href={`${protocol}://alice.${host}`}>@alice.bsky.sh</Link>&nbsp;(me)
         <h2>👩‍💻 Projects</h2>
-        <Link href={`https://emojistats.bsky.sh`}>
-          Emoji Stats for Bluesky
-        </Link>&nbsp;<b>(New!)</b>
+        <Link href={`https://emojistats.bsky.sh`}>Emoji Stats for Bluesky</Link>&nbsp;<b>(New!)</b>
         <br />
         <Link href={`https://bluesky-heatmap.fly.dev`}>Bluesky Posts Heatmap Generator</Link>
         <h2>🏷️ Labelers</h2>

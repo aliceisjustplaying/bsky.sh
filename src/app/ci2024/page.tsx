@@ -61,7 +61,10 @@ export default async function Page() {
         <h2>Labelers</h2>
         <ul>
           <li>
-            <Link href={`https://github.com/aliceisjustplaying/labeler-starter-kit-bsky`}>Bluesky Labeler Starter Kit</Link>&nbsp;<b>(New!)</b>
+            <Link href={`https://github.com/aliceisjustplaying/labeler-starter-kit-bsky`}>
+              Bluesky Labeler Starter Kit
+            </Link>
+            &nbsp;<b>(New!)</b>
           </li>
           <li>
             <Link href={`https://sortinghat.bsky.sh`}>sorting hat</Link>

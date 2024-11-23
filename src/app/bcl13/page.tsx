@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
+import NextPlausible from 'next-plausible';
 import { headers } from 'next/headers';
 
 export function generateMetadata(): Metadata {
@@ -43,6 +44,12 @@ export function generateMetadata(): Metadata {
 export default async function Page() {
   return (
     <>
+      <NextPlausible
+        domain={`https://bcl13.bsky.sh`}
+        customDomain={`https://plausible.bsky.sh`}
+        trackOutboundLinks
+        selfHosted
+      />
       <div className="main">
         <h1>Thanks for coming to my talk!</h1>
         <Link href={`https://bsky.app/profile/did:plc:by3jhwdqgbtrcc7q4tkkv3cf`}>@alice.mosphere.at</Link> on Bluesky
@@ -55,7 +62,9 @@ export default async function Page() {
             <Link href={`https://emojistats.bsky.sh`}>Emoji Stats for Bluesky</Link>
           </li>
           <li>
-            <Link href={`https://github.com/aliceisjustplaying/labeler-starter-kit-bsky`}>Bluesky Labeler Starter Kit</Link>
+            <Link href={`https://github.com/aliceisjustplaying/labeler-starter-kit-bsky`}>
+              Bluesky Labeler Starter Kit
+            </Link>
           </li>
           <li>
             <Link href={`https://bluesky-heatmap.fly.dev`}>Bluesky Posts Heatmap Generator</Link>
@@ -64,7 +73,9 @@ export default async function Page() {
             <Link href={`https://github.com/aliceisjustplaying/languagestats-bsky`}>Language Stats</Link>
           </li>
           <li>
-            <Link href={`https://alice.bsky.sh/post/3laega7icmi2q`}>How to self-host all of Bluesky except the AppView (for now)</Link>
+            <Link href={`https://alice.bsky.sh/post/3laega7icmi2q`}>
+              How to self-host all of Bluesky except the AppView (for now)
+            </Link>
           </li>
         </ul>
         <h2>Labelers</h2>
@@ -108,7 +119,9 @@ export default async function Page() {
         </ul>
         <h2>Support my work!</h2>
         <p>
-          If you found this talk helpful, consider supporting me on <Link href={`https://github.com/sponsors/aliceisjustplaying`}>GitHub Sponsors</Link> or <Link href={`https://ko-fi.com/aliceisjustplaying`}>Ko-fi</Link>.
+          If you found this talk helpful, consider supporting me on{' '}
+          <Link href={`https://github.com/sponsors/aliceisjustplaying`}>GitHub Sponsors</Link> or{' '}
+          <Link href={`https://ko-fi.com/aliceisjustplaying`}>Ko-fi</Link>.
         </p>
       </div>
     </>
