@@ -109,6 +109,9 @@ export default async function Page() {
           <li>
             <Link href={`https://pdsls.dev`}>PDSLS</Link>
           </li>
+          <li>
+            <Link href={`https://www.emojirain.lol/`}>EmojiRain</Link>
+          </li>
         </ul>
         <h2>Support my work!</h2>
         <p>
