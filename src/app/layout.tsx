@@ -7,7 +7,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         {children}
-        <Script src="https://cursor-party.aliceisjustplaying.partykit.dev/cursors.js"></Script>
         <Script src="https://scripts.simpleanalyticscdn.com/latest.js"></Script>
         <Script
           src="https://static.cloudflareinsights.com/beacon.min.js"

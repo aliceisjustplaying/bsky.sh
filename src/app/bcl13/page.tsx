@@ -70,6 +70,11 @@ export default async function Page() {
               How to self-host all of Bluesky except the AppView (for now)
             </Link>
           </li>
+          <li>
+            <Link href={`https://grafana.bsky.sh/public-dashboards/0c747802dcf14ed18f6e98fd6f2d126a?orgId=1`}>
+              Posts per Language Grafana dashboard
+            </Link>
+          </li>
         </ul>
         <h2>Labelers</h2>
         <ul>
