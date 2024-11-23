@@ -1,6 +1,4 @@
-const { withPlausibleProxy } = require('next-plausible');
-
-module.exports = withPlausibleProxy({ customDomain: 'https://plausible.bsky.sh' })({
+module.exports = {
   async headers() {
     return [
       {
@@ -14,4 +12,4 @@ module.exports = withPlausibleProxy({ customDomain: 'https://plausible.bsky.sh' 
       },
     ];
   },
-});
+};

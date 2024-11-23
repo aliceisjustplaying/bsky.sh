@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import React from 'react';
 import Link from 'next/link';
-import NextPlausible from 'next-plausible';
 import { headers } from 'next/headers';
 
 export function generateMetadata(): Metadata {
@@ -44,12 +43,6 @@ export function generateMetadata(): Metadata {
 export default async function Page() {
   return (
     <>
-      <NextPlausible
-        domain={`https://bcl13.bsky.sh`}
-        customDomain={`https://plausible.bsky.sh`}
-        trackOutboundLinks
-        selfHosted
-      />
       <div className="main">
         <h1>Thanks for coming to my talk!</h1>
         <Link href={`https://bsky.app/profile/did:plc:by3jhwdqgbtrcc7q4tkkv3cf`}>@alice.mosphere.at</Link> on Bluesky
