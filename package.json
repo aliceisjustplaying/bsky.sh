@@ -19,7 +19,7 @@
     "bookmarkleter": "^1.1.0",
     "eslint": "^9.15.0",
     "eslint-config-next": "15.0.3",
-    "next": "15.0.3",
+    "next": "15.2.3",
     "next-plausible": "^3.12.4",
     "patch-package": "^8.0.0",
     "postcss": "^8.4.49",
