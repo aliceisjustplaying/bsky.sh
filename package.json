@@ -12,25 +12,25 @@
   "dependencies": {
     "@babel/preset-typescript": "^7.26.0",
     "@types/node": "^22.9.3",
-    "@types/react": "npm:types-react@19.0.0-rc.1",
-    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
+    "@types/react": "19.0.12",
+    "@types/react-dom": "19.0.4",
     "@vercel/functions": "^1.5.0",
     "autoprefixer": "^10.4.20",
     "bookmarkleter": "^1.1.0",
     "eslint": "^9.15.0",
-    "eslint-config-next": "15.0.3",
-    "next": "15.0.3",
+    "eslint-config-next": "15.2.3",
+    "next": "15.2.3",
     "next-plausible": "^3.12.4",
     "patch-package": "^8.0.0",
     "postcss": "^8.4.49",
     "prism-react-renderer": "^2.4.0",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "tailwindcss": "^3.4.15",
     "typescript": "^5.7.2"
   },
   "overrides": {
-    "@types/react": "npm:types-react@19.0.0-rc.1",
-    "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1"
+    "@types/react": "19.0.12",
+    "@types/react-dom": "19.0.4"
   }
 }
