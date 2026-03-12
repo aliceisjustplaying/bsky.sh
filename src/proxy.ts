@@ -6,7 +6,7 @@ import { getValidSubdomain } from '@/utils/subdomain';
 const PUBLIC_FILE = /\.(.*)$/; // Files
 const DID_PATH_URI = '/.well-known/atproto-did';
 
-export async function middleware(req: NextRequest) {
+export async function proxy(req: NextRequest) {
   // Clone the URL
   const url = req.nextUrl.clone();
 
