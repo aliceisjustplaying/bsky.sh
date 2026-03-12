@@ -19,6 +19,10 @@ export default async function Page() {
         <Link href={`https://emojistats.bsky.sh`}>Emoji Stats for Bluesky</Link>&nbsp;<b>(New!)</b>
         <br />
         <Link href={`https://bluesky-heatmap.fly.dev`}>Bluesky Posts Heatmap Generator</Link>
+        <br />
+        <Link href={`${protocol}://perlsky.${host}`}>perlsky</Link>
+        <br />
+        <Link href={`${protocol}://atproto-smoke.${host}`}>atproto-smoke</Link>
         <h2>🏷️ Labelers</h2>
         <Link href={`${protocol}://sortinghat.${host}`}>sorting hat</Link>
         <br />
