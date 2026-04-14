@@ -1,6 +1,11 @@
 import './globals.css';
+import type { Metadata } from 'next';
 import React from 'react';
 import Script from 'next/script';
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://bsky.sh'),
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
