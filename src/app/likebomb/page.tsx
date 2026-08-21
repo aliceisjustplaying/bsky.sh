@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import React from 'react';
+import { createBookmarklet } from '../../utils/bookmarklet';
 import { CodeBlock } from '../../utils/highlight';
-// @ts-expect-error
-import bookmarkleter from 'bookmarkleter';
 
 export function generateMetadata(): Metadata {
   const title = `Bluesky Like Bomb`;
@@ -49,12 +48,7 @@ var filteredLikeButtons = [...likeButtons].filter(likeButton => !!likeButton.off
 filteredLikeButtons.forEach(e => e.click());
 `;
 
-const bookmarklet = bookmarkleter(code, {
-  urlencode: true,
-  iife: true,
-  minify: true,
-});
-
+const bookmarklet = createBookmarklet(code);
 const bookmarkletHref = `<a href="${bookmarklet}">💞 like bomb 💞</a>`;
 
 export default function Page() {
@@ -65,16 +59,11 @@ export default function Page() {
         Drag this to your bookmarks bar. Clicking it will like every visible post in the thread on Bluesky.
         <br />
         <br />
-        <div
-          dangerouslySetInnerHTML={{
-            __html: bookmarkletHref,
-          }}
-        ></div>
+        <div dangerouslySetInnerHTML={{ __html: bookmarkletHref }} />
         <br />
         <a href="https://page.brick.do/like-bomb-bookmarklet-lkKreDvYyP4d">Original twitter version</a> by{' '}
         <a href="https://staging.bsky.app/profile/did:plc:xbxpdv7nstw5ybmlneupnuaa">@nvpkp.bsky.social</a>. Created with
-        help from the <a href="https://discord.gg/3srmDsHSZJ">Bluesky API Touchers Discord</a>. Bookmarklet created with{' '}
-        <a href="https://chriszarate.github.io/bookmarkleter/">Bookmarkleter</a>.
+        help from the <a href="https://discord.gg/3srmDsHSZJ">Bluesky API Touchers Discord</a>.
       </div>
       <br />
       <div>

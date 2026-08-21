@@ -1,5 +1,4 @@
 module.exports = {
-  serverExternalPackages: ['bookmarkleter'],
   turbopack: {
     root: __dirname,
   },

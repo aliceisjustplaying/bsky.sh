@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import React from 'react';
+import { createBookmarklet } from '../../utils/bookmarklet';
 import { CodeBlock } from '../../utils/highlight';
-// @ts-expect-error
-import bookmarkleter from 'bookmarkleter';
 
 export function generateMetadata(): Metadata {
   const title = `Show All Replies`;
@@ -59,12 +58,7 @@ case l.includes('x.com'):
   break;
 }`;
 
-const bookmarklet = bookmarkleter(code, {
-  urlencode: true,
-  iife: true,
-  minify: true,
-});
-
+const bookmarklet = createBookmarklet(code);
 const bookmarkletHref = `<a href="${bookmarklet}">🙈 show all 🙈</a>`;
 
 export default function Page() {
@@ -76,13 +70,7 @@ export default function Page() {
         you muted.
         <br />
         <br />
-        <div
-          dangerouslySetInnerHTML={{
-            __html: bookmarkletHref,
-          }}
-        ></div>
-        <br />
-        Bookmarklet created with <a href="https://chriszarate.github.io/bookmarkleter/">Bookmarkleter</a>.
+        <div dangerouslySetInnerHTML={{ __html: bookmarkletHref }} />
       </div>
       <br />
       <div>
